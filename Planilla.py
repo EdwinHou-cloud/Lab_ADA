@@ -6,13 +6,16 @@ seguro educativo 1.25 %, impuesto sobre la renta 10 %."""
 #Inicializamos la lista empleados, para guardar los datos de cada empleado
 empleados= []
 
+j=1 #inicializa la variable j en 1
+
 #Bucle for para solicitar los datos de los 10 empleados
-for i in range(10):
-    nombreEmpleado= input("Ingrese el nombre del empleado : ")
+for i in range(1):
+    nombreEmpleado= input("Ingrese el nombre del empleado {}: ".format(j))
     cedula= input("Ingrese la cedula del empleado {}: ".format(nombreEmpleado))
     horasTrabajadas= float(input("Ingrese las horas trabajadas del empleado {}: ".format(nombreEmpleado)))
     pagoHora= float(input("Ingrese el pago por hora del empleado {}: ".format(nombreEmpleado)))
     print("\n")
+    j=j+1 #Incrementa el valor de j en 1
     
     #Calculo de salario bruto
     salarioBruto = horasTrabajadas * pagoHora
@@ -39,7 +42,7 @@ for i in range(10):
     empleados.append(empleado) 
 
 #Imprimir encabezado de la tabla
-print("{:20} {:15} {:15} {:15} {:15} {:15} {:15}".format(
+print("{:20} {:15} {:18} {:15} {:14} {:16} {:15}".format(
     'Nombre del empleado', 'Cedula', 'Horas trabajadas', 'Pago por hora', 'Salario bruto', 'Total de deducciones', 'Sueldo por pagar'))
 
 #Imprimir la tabla con los datos de cada empleado
